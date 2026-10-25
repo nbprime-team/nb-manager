@@ -65,6 +65,13 @@ with `make UNIFONT_HEX=/path/to/unifont.hex` (or point it at `unifont_jp.hex` fo
 Japanese variant).  `tools/gen_font.py` accepts `--coverage FILE` (extra ranges) and
 `--extra FILE` (extra single characters) to widen the embedded subset.
 
+> **预编译二进制 / Prebuilt binaries**：不想本地装工具链的话，直接取 GitHub Release `v1`
+> 的资产（`fmen.elf` 英文版、`fm_stripped.elf`）。仓库里不保存 `.elf`（见 `.gitignore`）。
+>
+> ```bash
+> gh release download v1 -R nbprime-team/nb-manager -D .
+> ```
+
 Install to the calculator: copy `fm.elf` into the `apps` directory of the Prime's C: drive
 (Upsilon: Vars key while connected to a PC), then start it from the External app.
 
